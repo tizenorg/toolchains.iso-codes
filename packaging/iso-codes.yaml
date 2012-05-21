@@ -1,0 +1,29 @@
+Name: iso-codes
+Summary: ISO code lists and translations
+Version: 3.13
+Release: 1
+Group: System/Base
+License: LGPLv2+
+URL: http://alioth.debian.org/projects/pkg-isocodes/
+Sources:
+    - ftp://pkg-isocodes.alioth.debian.org/pub/pkg-isocodes/iso-codes-%{version}.tar.bz2
+Description: |
+    This package provides the ISO 639 Language code list, the ISO 4217
+    Currency code list, the ISO 3166 Territory code list, and ISO 3166-2
+    sub-territory lists, and all their translations in gettext format.
+
+Requires:
+    - xml-common
+PkgBR:
+    - gettext-tools >= 0.16
+BuildArch: noarch
+LocaleName: iso-codes
+LocaleOptions: --all-name
+SubPackages:
+    - Name: devel
+      Summary: Files for development using %{name}
+      Group: Development/Libraries
+      Description: |
+          This package contains the pkg-config files for development
+          when building programs that use %{name}.
+
