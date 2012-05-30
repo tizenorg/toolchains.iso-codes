@@ -15,6 +15,7 @@ BuildArch:  noarch
 URL:        http://alioth.debian.org/projects/pkg-isocodes/
 Source0:    ftp://pkg-isocodes.alioth.debian.org/pub/pkg-isocodes/iso-codes-%{version}.tar.bz2
 Source100:  iso-codes.yaml
+Source1001: packaging/iso-codes.manifest 
 Requires:   xml-common
 BuildRequires:  gettext-tools >= 0.16
 
@@ -44,6 +45,7 @@ when building programs that use %{name}.
 # << setup
 
 %build
+cp %{SOURCE1001} .
 # >> build pre
 # << build pre
 
@@ -74,6 +76,7 @@ rm -rf %{buildroot}
 
 
 %files -f iso-codes.lang
+%manifest iso-codes.manifest
 %defattr(-,root,root,-)
 # >> files
 %doc ChangeLog README LICENSE
@@ -83,6 +86,7 @@ rm -rf %{buildroot}
 
 
 %files devel
+%manifest iso-codes.manifest
 %defattr(-,root,root,-)
 # >> files devel
 %{_datadir}/pkgconfig/iso-codes.pc
