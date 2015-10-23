@@ -8,7 +8,8 @@
 Name:       iso-codes
 Summary:    ISO code lists and translations
 Version:    3.13
-Release:    1
+Release:    %{?release_prefix:%{release_prefix}.}1.44.%{?dist}%{!?dist:tizen}
+VCS:        external/iso-codes#submit/trunk/20121019.111053-0-g6f618715140fa2df57a503b3bd6d4eb70a80f300
 Group:      System/Base
 License:    LGPLv2+
 BuildArch:  noarch
@@ -88,3 +89,33 @@ rm -rf %{buildroot}
 %{_datadir}/pkgconfig/iso-codes.pc
 # << files devel
 
+%changelog
+* Mon Sep 16 2013 UkJung Kim <ujkim@samsung.com> - submit/trunk/20121019.111053 
+- PROJECT: external/iso-codes
+- COMMIT_ID: 6f618715140fa2df57a503b3bd6d4eb70a80f300
+- PATCHSET_REVISION: 6f618715140fa2df57a503b3bd6d4eb70a80f300
+- CHANGE_OWNER: \"UkJung Kim\" <ujkim@samsung.com>
+- PATCHSET_UPLOADER: \"UkJung Kim\" <ujkim@samsung.com>
+- CHANGE_URL: http://slp-info.sec.samsung.net/gerrit/103460
+- PATCHSET_REVISION: 6f618715140fa2df57a503b3bd6d4eb70a80f300
+- TAGGER: UkJung Kim <ujkim@samsung.com>
+- Gerrit patchset approval info:
+- UkJung Kim <ujkim@samsung.com> Verified : 1
+- Newton Lee <newton.lee@samsung.com> Code Review : 2
+- CHANGE_SUBJECT: Initial commit
+- [Version] 3.13
+- [Project] GT-I8800
+- [Title] Initial commit
+- [BinType] PDA
+- [Customer] Open
+- [Issue#] N/A
+- [Problem] N/A
+- [Cause] N/A
+- [Solution]
+- [Team] SCM
+- [Developer] UkJung Kim <ujkim@samsung.com>
+- [Request] N/A
+- [Horizontal expansion] N/A
+- [SCMRequest] N/A
+* Fri Feb 12 2010 Anas Nashif <anas.nashif@intel.com> - 3.13
+- Update to 3.13
